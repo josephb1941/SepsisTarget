@@ -1,0 +1,187 @@
+
+<!--
+
+http://docs.parseplatform.org/js/guide/
+
+
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sepsis Mental Model</title>
+    
+    
+    <script type="text/javascript" src="target.js"></script>	
+    <script type="text/javascript" src="parse.js"></script>	
+    <script type="text/javascript" src="survey.js"></script>	
+	<link rel="stylesheet" type="text/css" href="target.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="jquery-ui.css"/> -->
+
+	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	 -->
+
+	 <script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script> 
+
+	
+
+</head>
+
+
+
+<body onload="onLoad()">
+
+	
+	<DIV id="dvSurvey">
+		<DIV id="dvTitle">Welcome to the Sepsis Mental Modeler!</DIV>
+		<DIV id="dvSubtitle">Please answer the following questions before we begin</DIV>
+		
+		<DIV id="dvOccupation">
+			<DIV class="dvQuestions">1. What is your <u>occupation</u>?</DIV>
+			
+			<SELECT id="selOccupation" onchange="occupationSelected(this.value);">
+				<option selected disabled hidden style='display: none' value=''></option>
+				<option value="physician">Physician</option>
+				<option value="nurse">Nurse</option>
+				<option value="APP">Advanced Practice Provider</option>
+				<option value="nonclinician">Non-clinician</option>
+			</SELECT>
+		
+			</DIV>
+	
+		<DIV id="dvExperience">
+			<DIV class="dvQuestions">2. Years of <u>Experience</u> in Clinical Practice (with exposure to sepsis)?</DIV>
+			
+			<SELECT id="selExperience" onchange="experienceSelected(this.value);">
+				<option selected disabled hidden style='display: none' value=''></option>
+				<option value="<5">Less than 5 years</option>
+				<option value="5-10">5 to 10 years</option>
+				<option value="10+">10+ years</option>
+			</SELECT>
+		
+			</DIV>
+
+		<DIV id="dvExpertise">
+			<DIV class="dvQuestions">3. Would you consider yourself a Sepsis <u>Expert</u>?</DIV>
+			<form id="fmExpertise" onchange="expertiseSelected(this.value);">
+			  <input type="radio" name="radExpertise" value="Yes"> Yes
+			  <input type="radio" name="radExpertise" value="No"> No
+			</form> 
+			
+		</DIV>
+		</DIV>
+		
+		<DIV id="dvDisclosure">
+		
+			<DIV id="dvDisclosureText"><b>Disclosure:</b> This survey will be used to help inform our sepsis research and to improve lives around the world. 
+				The information we collect about you may be used anonymously to explore benefits and barriers to sepsis clinical care.</DIV>
+			
+			<button id="btnAgree" type="button" onclick="submitSurvey()">Agree & Submit</button>
+		</DIV>
+			
+		
+	</DIV>
+	
+
+	<DIV id="dvMain">
+	
+		<DIV id="dvInstructions">
+			<p id="parTitle">INSTRUCTIONS:</p>
+			<p id="parInst1">Below is a "word bank" of words that may or may not be related to sepsis diagnosis.
+			<br>The word in the middle of the bullseye is the "target word."</p>
+			<p id="parInst2">Please tell us <u>how strongly related</u> each word from the "word bank" is to the "target word" by dragging the word to a location on the target.</p>
+	
+			 <ul id="ulInst">
+				  <li class="liInst">The closer (radially) a word is placed to the bullseye, the <b>stronger</b> the relationship</li>
+				  <li>Words <b>synonymous</b> with the target word should be placed within the bullseye circle</li>
+				  <li>Words with <b>no relationship</b> to the target word should be placed <b>outside</b> the target</li>
+			</ul> 
+			
+			<button id="btnStart" type="button" onclick="hideInstructions();">Got it!</button>
+	
+	
+	
+	
+	</DIV>
+
+		
+		<DIV id="dvWordBank">
+
+		</DIV>
+		
+		<DIV id='dvTarget'>
+			
+		 <DIV id='dvBullseye'> 
+		
+			<div class="dvLabels" id='dvNotRelated'>
+				<label id="lblNotRelated"> Not Related</label>
+				
+			</div>
+		
+				<DIV class="cirRing1">
+		
+					<DIV class="cirRing2">
+						<div class="dvLabels" id='dvModRelated'>
+							<label id="lblModRelated"> Moderately Related</label>
+				
+						</div>
+			
+						<DIV class="cirRing3">
+
+							<DIV class="cirRing4">
+								<div class="dvLabels" id='dvMostRelated'>
+									<label id="lblMostRelated">Most Related</label>
+						
+								</div>
+								
+								<DIV class="cirRing5">
+				
+								<DIV id='dvTargetWord'>Sepsis</DIV>
+								
+				
+				
+								</DIV>
+				
+				
+							</DIV>
+						
+			
+						</DIV>
+			
+			
+					 </DIV> 
+		
+				</DIV>
+			
+				
+		 </DIV>  
+		 
+			<button id="btnSubmit" type="button" onclick="saveScores()">Submit</button>
+		
+		</DIV> 
+
+		
+		
+		
+		
+	
+	</DIV>
+	
+	<DIV id="dvThankYou">Thank you for your participation!</DIV>
+
+<!-- <DIV>Data from online spreadsheet is:</DIV>
+</BR>
+<DIV id="values"></DIV>
+	
+<SVG height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</SVG>	
+ -->	
+	
+	
+</body>
+</html>

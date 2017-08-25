@@ -1,0 +1,592 @@
+#dvMain {
+    border: black solid 1px;
+    height: 95vh;
+	
+    width: 100%;
+
+	overflow: hidden;
+    
+}
+
+#dvWordBank {
+
+	border-right: blue solid 1px;
+	width: 20%;
+	height: 100%;
+	
+	display: block;
+	float: left;
+
+
+}
+
+#bullseye {
+
+	height: 100%;
+
+
+}
+
+#cirRing2 {
+
+	fill: #696969;
+
+}
+
+
+
+.cirRing5 {
+
+
+	border-radius: 30vh; 
+	
+	-webkit-border-radius: 30vh;
+	-moz-border-radius: 30vh;
+
+	width: 30vh;
+	height: 30vh;
+
+   	display: flex; 
+	
+	align-items: center;
+	justify-content: center;
+	
+
+	background: rgb(105,105,105);
+	
+}
+
+
+
+.cirRing4 {
+
+-webkit-border-radius: 45vh;
+	-moz-border-radius: 45vh;
+	border-radius: 45vh;
+
+	width: 45vh;
+	height: 45vh;
+
+   	display: flex; 
+	
+	align-items: center;
+	justify-content: center;
+	
+
+	background: rgb(135,135,135);
+	
+}
+
+
+
+.cirRing3 {
+
+-webkit-border-radius: 60vh;
+	-moz-border-radius: 60vh;
+	border-radius: 60vh;
+
+	width: 60vh;
+	height: 60vh;
+
+   	display: flex; 
+	
+	align-items: center;
+	justify-content: center;
+	
+
+	background: rgb(165,165,165);
+	
+}
+
+
+
+.cirRing2 {
+
+-webkit-border-radius: 75vh;
+	-moz-border-radius: 75vh;
+	border-radius: 75vh;
+
+	width: 75vh;
+	height: 75vh;
+
+   	display: flex; 
+	
+	align-items: center;
+	justify-content: center;
+
+
+	background: rgb(192,192,192);
+	
+}
+
+
+
+/* #cirRing1 { */
+.cirRing1 {
+
+	-webkit-border-radius: 90vh;
+	-moz-border-radius: 90vh;
+
+	border-radius: 90vh; 
+
+	width: 90vh;
+	height: 90vh;
+ 
+   /* background: #808080; */
+   background: rgb(225,225,225);
+   
+   	display: flex; 
+	
+	align-items: center;
+	justify-content: center;
+
+ 
+ }
+
+ 
+ #dvTargetWord {
+ 
+ 	border: black solid 3px;
+	width: 100px;
+	height: 35px;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	line-height: 35px;  
+	background-color: rgb(198,217,240);
+	z-index: 2;
+	
+	
+ 
+ }
+ 
+ 
+ #dvBullseye {
+
+
+	/* border: blue solid 3px;  */
+
+	height: 90vh;
+	
+	/* height: 100%; */
+	
+	/* display: inline-block; */
+	
+	
+/* 	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+ */
+
+} 
+#dvTarget {
+
+	/* border: red solid 2px;  */
+	
+	 height: 100%;
+	  /* width: 20vw;   */
+	overflow: hidden;
+	
+	display: flex; 
+	
+	align-items: center;
+	justify-content: center;
+	
+	
+
+}
+
+.dvWord {
+
+	border: black solid 3px;
+	width: 150px;
+	height: 25px;
+	font-family: Helvetica;
+	font-style: italic;
+	font-size: 13px;
+	text-align: center;
+	line-height: 25px;  
+	/* cursor: pointer; */
+	cursor: move; 
+	
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	z-index: 1;
+	
+	
+}
+
+#lblNotRelated {
+
+	float: right;
+	margin-right: 1%
+
+
+}
+
+
+#dvNotRelated {
+
+	width: 90vh;
+
+}
+
+
+#lblModRelated {
+/* #dvModRelBox { */
+
+	float: right;
+	margin-right: 1%;
+	/* border: red solid 3px; */
+	/* height: 50px; */
+	height: 10vh;
+	/* width: 100px; */
+	width: 10vw;
+	text-align: center;
+	
+}
+
+#dvModRelated {
+
+	width: 70vh;
+	top: 20vh;
+	height: 100px;
+	
+	/* border: black solid 3px; */
+
+}
+
+
+#dvMostRelated {
+
+	width: 45vh;
+	top: 35vh;
+	
+
+}
+
+#lblMostRelated {
+
+	float: right;
+	margin-right: 1%;
+	
+
+}
+
+
+/* 
+#dvModRelBox {
+
+
+
+
+
+} */
+
+
+.dvLabels {
+
+	position: absolute;
+	font-size: 1.5em;
+	font-family: Helvetica;
+	font-style: italic;
+	font-weight: bold;
+	top: 5%;
+	
+	
+
+	/* border: black solid 3px; */
+	
+	
+
+}
+
+
+.highlight {
+	border: 1px solid #dad55e;
+	background: #fffa90;
+	cursor: move;
+	/* color: #777620; */
+	
+}
+
+#btnSubmit {
+
+
+	width: 125px;
+	height: 35px;
+	align-self: flex-end;
+	margin-bottom: 2%;
+	margin-left: 5%;
+	font-size: 1.5em;
+	font-family: Helvetica;
+	cursor: pointer;
+	/* font-style: italic;
+	font-weight: bold;
+	 */
+
+	 
+	 
+/* 	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;	 
+ */	 
+
+}
+
+#btnSubmit:disabled {
+
+
+	width: 125px;
+	height: 35px;
+	align-self: flex-end;
+	margin-bottom: 2%;
+	margin-left: 5%;
+	font-size: 1.5em;
+	font-family: Helvetica;
+	cursor: auto;
+	/* font-style: italic;
+	font-weight: bold;
+	 */
+
+	 
+	 
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;	 
+	 
+
+}
+
+
+#dvSurvey {
+
+	font-family: Helvetica;
+
+}
+
+#dvTitle {
+
+	/* font-family: Helvetica; */
+	font-size: 2.5em;
+	font-weight: bold;
+	text-align: center;
+
+
+}
+
+#dvSubtitle {
+
+	/* font-family: Helvetica; */
+	font-size: 1.5em;
+	font-weight: bold;
+	/* text-align: center; */
+	margin-top: 5%;
+	margin-left: 1%;
+
+
+}
+
+
+#dvOccupation {
+
+	margin-left: 2%;
+	margin-top: 3%;
+	display: block;
+	/* overflow: hidden; */
+	width: 90%;
+	
+
+}
+
+
+.dvQuestions {
+
+	font-size: 1.25em;
+
+	/* float: left; */
+	
+}
+
+#selOccupation, #selExperience {
+
+	margin-left: 20px;
+	margin-top: 1%;
+	width: 250px;
+	height: 25px;
+	font-size: 1em;
+
+
+
+}
+
+
+
+#dvExperience {
+
+
+	margin-left: 2%;
+	margin-top: 5%;
+	/* display: block; */
+	/* overflow: hidden; */
+	width: 90%;
+
+
+
+}
+
+#dvExpertise {
+
+	margin-left: 2%;
+	margin-top: 5%;
+	/* display: block; */
+	/* overflow: hidden; */
+	width: 90%;
+
+
+}
+
+#fmExpertise {
+
+	margin-left: 20px;
+	margin-top: 1%;
+	font-size: 1em;
+
+}
+
+#dvDisclosure {
+
+	margin-left: 5%;
+	margin-top: 5%;
+	/* width: 55%; */
+	
+	
+	width: 90%;
+	
+	/* display: block; */
+	overflow: hidden;
+	
+
+
+}
+
+
+#dvDisclosureText {
+
+	width: 55%;
+	float: left;
+	
+	font-family: Helvetica;
+	font-style: italic;
+	
+
+}
+
+
+#btnAgree {
+
+	margin-left: 5%;
+	height: 40px;
+	width: 200px;
+	font-family: Helvetica;
+	cursor: pointer;
+
+
+}
+
+
+#dvInstructions {
+
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: 300px;
+	width: 850px;
+	background-color: #F5F5F5;
+	z-index: 5;
+
+	font-family: Helvetica;
+	
+}
+
+#parTitle {
+
+	margin-left: 10px;
+	font-size: 22px;
+
+
+}
+
+#parInst1 {
+
+	margin-left: 10px;
+	font-size: 18px;
+
+
+
+}
+
+#parInst2 {
+	
+
+	margin-left: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	
+	
+}
+
+ul li 
+ {
+	
+	margin-top: 10px;
+	
+}
+
+
+#btnStart {
+	
+	/* margin-right: 30px;  */
+	/* margin-bottom: 300px;  */
+	left: 675px;
+	top: 200px;
+	/* bottom: 50px;  */
+	height: 50px;
+	width: 125px;
+	font-family: Helvetica;
+	float: right;
+	position: absolute;
+	background-color: #4CAF50;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+	
+	
+}
+
+#dvThankYou {
+	
+	font-family: Helvetica;
+	margin-top: 450px;
+	
+	text-align: center;
+	
+	font-size: 50px;
+	
+}
+
+
+/* 
+.bg-change {
+  
+
+	fill: yellow;
+
+  }
+  
+  
+.ui-draggable, .ui-droppable {
+background-position: top;
+}
+ */
