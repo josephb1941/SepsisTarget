@@ -648,8 +648,8 @@ function init() {
 
    
    
-   alert('found my words');
-   
+
+
    query.find({
     
 	success: function(feeds){
