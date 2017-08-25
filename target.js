@@ -1,5 +1,5 @@
 var debugTarget = false;
-var debug = false;
+var debug = true;
 
 
 var arrResults = [];
@@ -126,8 +126,8 @@ function submitSurvey() {
 			// alert('Saved');
 			
 			participantId = participants.id;
-			$("#dvSurvey").hide();
 			
+			$("#dvSurvey").hide();
 			$("#dvDisclosure").hide();
 			$("#dvMain").show();
 			
@@ -171,6 +171,7 @@ function onLoad() {
 
 	
 	init();
+	
 	// initSurvey();
 	// createTarget();
 	// addLabels();
@@ -196,9 +197,18 @@ function onLoad() {
 
 	}
 	else {
+		// $("#dvMain").hide();
+		// $("#dvDisclosure").hide();
+		// $("#dvThankYou").hide();	
+		
+		// alert("hide stuff");
+		
+		// document.getElementById("dvMain").style.display = 'none';
 		$("#dvMain").hide();
 		$("#dvDisclosure").hide();
 		$("#dvThankYou").hide();	
+		
+		
 		
 		
 	}
@@ -347,6 +357,7 @@ function init() {
 	});
 	
 	
+	
 	$(".cirRing1").droppable({
 	
 
@@ -378,7 +389,7 @@ function init() {
 });
 
 	
-	
+
 	
 	
 	/*
@@ -585,18 +596,29 @@ function init() {
 
 	// alert('hello');
 
+	
+
+	
 	Parse.initialize(
 	  "PXNfHJ6ZgtTiKLroGK4gBjKEdsVG8cPQzLOppqCh",
 	  "vqX2mhGY0zes8YvPKSMxvu0Sz7Qs8CLphqVParKC"
 	);
+	
+	
+
 
 	Parse.serverURL = 'https://pg-app-jrsgsfl4oyjs0klc20kduakqkwyeih.scalabl.cloud/1/';
+	
+	
+
 	
 	//alert('I did stuff');
 	
 	var Words = Parse.Object.extend("Words");
 	
 	var words = new Words();
+	
+
 	
 	var query = new Parse.Query(Words);
 	
@@ -620,11 +642,22 @@ function init() {
    
    
    
+   		// alert("here");
+	
+	// return;
+
+   
+   
+   alert('found my words');
+   
    query.find({
-    success: function(feeds){
+    
+	success: function(feeds){
         // var jsonArray = [];
 
-		// alert('found my words');
+		
+		
+	
 		
         for(var i = 0; i < feeds.length; i++) {
            allWords.push(feeds[i].toJSON());
@@ -645,7 +678,7 @@ function init() {
    
    // alert(allWords.length);
    
-   testPromise();
+   // testPromise();
    
    //});
 	
@@ -1000,7 +1033,7 @@ var query = new Parse.Query(GameScore);
 }
 
 
-
+/*
 var gotAllObjects = new Promise(
 	
 	function (resolve, reject) {
@@ -1058,6 +1091,8 @@ var askMom = function () {
 askMom();
 
 }
+
+*/
 
 /*
 var GameScore = Parse.Object.extend("GameScore");
