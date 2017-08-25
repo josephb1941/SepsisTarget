@@ -1,5 +1,5 @@
 var debugTarget = false;
-var debug = false;
+var debug = true;
 
 
 var arrResults = [];
